@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+    padding: 16px;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    padding: 24px 16px;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #1a202c;
+    border-bottom: 1px solid #e2e8f0;
+    background: #ffffff;
+    width: 100%;
+}
+
+.schedule-table {
+    width: 100%;
+    max-width: 600px;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.schedule-table th {
+    background: #f7fafc;
+    padding: 16px 12px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #4a5568;
+    border-bottom: 1px solid #e2e8f0;
+    border-right: 1px solid #e2e8f0;
+}
+
+.schedule-table th:last-child {
+    border-right: none;
+}
+
+.schedule-table td {
+    padding: 16px 12px;
+    border-bottom: 1px solid #000000;
+    border-right: 1px solid #000000;
+    vertical-align: top;
+}
+
+.schedule-table td:last-child {
+    border-right: none;
+    
+}
+
+.schedule-table tr:last-child td {
+    border-bottom: none;
+}
+
+.day-cell {
+    font-weight: 600;
+    color: #2d3748;
+    width: 120px;
+    min-width: 120px;
+    padding: 20px;
+}
+
+.subjects-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.subjects-list li {
+    background: #f8f9ff;
+    margin: 4px 0;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    color: #4a5568;
+    border-left: 3px solid #e2e8f0;
+}
+
+.subjects-list li:nth-child(odd) {
+    border-left-color: #4299e1;
+}
+
+.subjects-list li:nth-child(even) {
+    border-left-color: #48bb78;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+    body {
+        padding: 8px;
+        align-items: stretch;
+    }
+
+    .container {
+        border-radius: 0;
+        box-shadow: none;
+        margin: 0;
+        width: 100%;
+    }
+
+    .schedule-table {
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        padding: 20px 12px;
+    }
+
+    .schedule-table {
+        font-size: 0.875rem;
+    }
+
+    .schedule-table th,
+    .schedule-table td {
+        padding: 12px 8px;
+    }
+
+    .day-cell {
+        width: 100px;
+        min-width: 100px;
+        font-size: 0.875rem;
+    }
+
+    .subjects-list li {
+        padding: 6px 8px;
+        font-size: 0.8rem;
+        margin: 3px 0;
+    }
+}
+
+/* Очень маленькие экраны */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.25rem;
+        padding: 16px 8px;
+    }
+
+    .schedule-table th,
+    .schedule-table td {
+        padding: 8px 6px;
+    }
+
+    .day-cell {
+        width: 80px;
+        min-width: 80px;
+        font-size: 0.8rem;
+    }
+
+    .subjects-list li {
+        font-size: 0.75rem;
+        padding: 4px 6px;
+    }
+}
